@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functional Components</title>
+</head>
+<body>
+    <body>
+        <div id="root">
+    
+        </div>
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <script type="text/babel">
+            class BonjourClass extends React.Component {
+                render () {
+                    return (
+                        <div>
+                            <h1>{this.props.message}</h1>
+                        </div>
+                    )
+                }
+            }
+
+            const Bonjour = (props) => (
+                <div>
+                    <h1>{props.message}</h1>
+                </div>
+            )
+                // OBJET DESTRUCTURE
+            const BonjourDestructured = ({message}) => (
+                <div>
+                    <h1>{message}</h1>
+                </div>  
+            )
+            ReactDOM.render(
+                <BonjourDestructured message="Bonjour de " />,
+                document.getElementById("root")
+            )
+        </script>
+    </body>
+    </html>
+</body>
+</html>
